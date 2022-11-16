@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
     # run script in parallel
     res = Parallel(
-        n_jobs=5
+        n_jobs = -1
     )(
         delayed(parallel_process)((index, row)) for index, row in df.iterrows()
     )
